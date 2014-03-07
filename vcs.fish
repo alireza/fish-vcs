@@ -18,8 +18,7 @@ function __vcs_info --description "Print a vcs prompt - supports git and hg"
     if test "$d" = /
       break
     end
-    # portable "realpath" equivalent
-    set d (cd "$d/.."; and echo "$PWD")
+    set d ($d/..; and echo "$PWD")
   end
 
   set -l br
